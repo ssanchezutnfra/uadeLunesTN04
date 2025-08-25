@@ -197,7 +197,7 @@ Branches ramas en Git
 
    - Fusionar ramas: `git merge <nombre-rama>`.
 	Supongamos que terminaste de desarrollar la funcionalidad de login en feature/login y quieres fusionarla con master:
-   	git checkout master       # Cambias a la rama master
+   	git switch master       # Cambias a la rama master
 	git merge feature/login  # Fusionas feature/login en master
 	Si no hay conflictos, Git fusionará automáticamente los cambios. 
 	Si hay conflictos significa que hay cambios en las mismas partes del mismo archivo en ambas ramas (main o master y feature/login), debes resolver los conflictos manualmente.
@@ -212,24 +212,22 @@ Branches ramas en Git
 	git branch feature/login
 
 	Cambiar a esta rama:
-	git checkout feature/login
+	git switch feature/login
 
 	Verifico en que rama estoy
 	git branch
 
-	Hacer cambios y subirlos al Staging Area y al Repo Local: ej: crear un archivo login.html y luego:
+	Hacer cambios y subirlos al Staging Area y al Repo Local: 
+	ej: crear directorio login, un archivo login.html y luego:
 	git add .
 	git commit -m "Añadir funcionalidad de login"
 	
-	Subir rama a Github
-	git push -u origin feature/login
 
 	Fusionar la rama con master:
 	git switch master
 	git merge feature/login
 
 	Subir rama master fusionada
-	git push -u origin master 
 
 	Eliminar la rama después de fusionar:
 	git branch -d feature/login
